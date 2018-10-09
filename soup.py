@@ -10,19 +10,10 @@ for file in file_list:
             try:
                 with open(line.strip()+".name","r") as input_file:
 
-
-                    #input_file="cctv.txt"
-
-
                     soup = BeautifulSoup(input_file, 'html.parser')
-
-                    #soup = BeautifulSoup(input_doc, 'html.parser')
-                    #print(soup.get_text())
-
-                    #print(soup)
-
+                    
                     name_list=[]
-                    tag_string_dict={}
+                    #tag_string_dict={}
                     j=0
                     enamex_list = soup.find_all('enamex')
                     n_enamex_list = len(soup.find_all('enamex'))
@@ -33,7 +24,7 @@ for file in file_list:
                             extra_tag=int(str(tag).count("<")/2-1)  #count (the num of "<" over 2) -1 , skip this num
                             if extra_tag>0:
                                 composite=str(tag)
-                                temp_soup=BeautifulSoup(composite, 'html.parser')
+                                temp_soup=BeautifulSoup(composite, 'html.parser')  #find all text in a composite tag
                                 composite_list=temp_soup.findAll(text=True)
                                 temp_str=""
                                 if_begin=True
@@ -44,10 +35,10 @@ for file in file_list:
                                         string_list.append(word)
 
                                 for word in string_list:
-                                    if if_begin==True and word is not "":
+                                    if if_begin==True and word != "":
                                         temp_str+=word+"/B-"+tag['type']+" "
                                         if_begin=False
-                                    elif if_begin==False and word is not "":
+                                    elif if_begin==False and word != "":
                                         temp_str+=word+"/I-"+tag['type']+" "
                                 name_list.append(temp_str)
                                 j+=extra_tag
@@ -70,14 +61,9 @@ for file in file_list:
                             soup.enamex.extract()
                         except AttributeError as e:
                             print(e)
-                        tag_string_dict[tag.string]=tag['type']  #add at the end to prevent being matched beforehand
+                        #tag_string_dict[tag.string]=tag['type']  #regardless of being mentioned or not
                         j+=1
-                    #print(tag_string_dict)
-                    #print(name_list)
-                    #soup.enamex.extract()
-
                     word_list=soup.get_text().strip().replace("\n"," \n ").split(" ")
-                    #print(word_list)
                     output+="-DOCSTART-/O\n"
                     i=0
                     k=0
@@ -85,19 +71,17 @@ for file in file_list:
                         word=word_list[k]
                         if word != "" and word != "\n":
                             output+=word+"/O "
-                            #print(output)
+                            
                         elif word is "\n":
                             output+="\n"
-                            #print(output)
+                            
                         elif word is ""  and word_list[k-1] != "\n" and word_list[k+1] != "\n":
                             output+=name_list[i]
-                            #print(output)
+                            
                             i+=1
                         k+=1
                     output+="\n"
                     print(line)
-                    #print(tag_string_dict)
-                    #print(input_doc.strip().split(" "))
 
             except FileNotFoundError as e:
                 print(e)
