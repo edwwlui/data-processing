@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 file_list=["english-ontonotes-5.0-train-document-ids","english-ontonotes-5.0-development-document-ids","english-ontonotes-5.0-conll-2012-test-document-ids","english-ontonotes-5.0-test-document-ids"]
 for file in file_list:
-    output_file="annotated"+file[:-4]+".txt"
+    output_file="annotated-"+file[:-4]+".txt"
     output=""
     with open("server-"+file+".txt", "r") as path_f:
         for line in path_f:  #one file per line
