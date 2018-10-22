@@ -9,9 +9,7 @@ for file in file_list:
         for line in path_f:  #one file per line
             try:
                 with open(line.strip()+".name","r") as input_file:
-
                     soup = BeautifulSoup(input_file, 'html.parser')
-                    
                     name_list=[]
                     #tag_string_dict={}
                     j=0
