@@ -29,11 +29,11 @@ for suf in suffices:
         for line in f:
             line = line.strip()
             if line:
-                # get sent_ix
+                #get sent_ix
                 s_i = len(data['meta']['list_index'])
                 s_i = str(s_i)
 
-                # get meta
+                #get meta
                 data['meta']['list_index'] += [s_i]
                 data['meta'][suf] += [s_i]
 
@@ -41,7 +41,7 @@ for suf in suffices:
                 index_sent_dict={s_i: line}
                 data['meta']['sentence_to_index'].update(OrderedDict(index_sent_dict))
 
-                # get src sent
+                #get src sent
                 src = nltk.word_tokenize(line)
                 src = ' '.join(src)
                 src_noun = annot_noun(src)
@@ -52,12 +52,10 @@ for suf in suffices:
                     'class': suf.split('.')[1]
                 }
                 
-
 #assert (len(data) - 1) == total_num_of_lines_in_all_files
 #assert (len(['meta'][suf])) == total_num_of_lines_in_[suf]
 #assert: a random sentence in data, check whether it's in the correct 'mt_grp'
 
 import torch
-
 path = "~/language_style_transfer/data/dataset/fi/form.index.torch"
 torch.save(data, os.path.expanduser(path))
