@@ -61,19 +61,3 @@ import torch
 
 path = "~/language_style_transfer/data/dataset/fi/form.index.torch"
 torch.save(data, os.path.expanduser(path))
-
-"""
-%testing
-
-print("len(data)-1: "+str(len(data)-1))
-
-for suf in suffices:
-    print("len(data['meta']"+suf+": "+str(len(data['meta'][suf])))
-
-%104564 in train.1
-
-print(data['meta']['sentence_to_index']['104564'])
-print(data['104564'])
-
-%is train.1
-"""
