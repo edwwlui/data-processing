@@ -15,7 +15,7 @@ for suf in suffices:
                     string_to_write = ""
                     string_to_write += '{"review": "' + line
                     if (suf[-1] == "1"):  # negative->0 score
-                        string_to_write += '", "score": "5"}'
+                        string_to_write += '", "score": "5"'
                     elif (suf[-1] == "0"):  # negative->0 score
-                        string_to_write += '", "score": "1"}'
-                    fw.write(string_to_write+"\n")
+                        string_to_write += '", "score": "1"'
+                    fw.write(string_to_write+', "weight": "0.5", "reward": "1"}'+"\n")
