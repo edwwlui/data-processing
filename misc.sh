@@ -32,8 +32,9 @@ input_params=param_dict)\n  File "/home/fyp1/ed/if_data/3yelp_atof/src/deep/algo
 	If you do not mind this precision loss, you can: 1) explicitly convert your data to a numpy array of dtype float32, or 2) set "allow_input_downcast=True" when calling "function".', [[0.5828757978222049]])
 
 
-(py27) fyp1@kao-server1:~/ed/if_data/5yelp_theano$  nohup bash run.sh train DeleteAndRetrieve yelp > train.stdout.txt 2>train.      stderr.txt &
-[1] 211288
+(py27) fyp1@kao-server1:~/ed/if_data/6yelp_theano$ nohup bash run.sh train DeleteAndRetrieve yelp > train.stdout.txt 2>train.stderr.txt &
+[1] 211994
+
 
 (smae) fyp1@kao-server1:~/ed/smae/1$ CUDA_VISIBLE_DEVICES=1
 (smae) fyp1@kao-server1:~/ed/smae/1$ nohup python3 main.py > test.stdout.txt 2>test.stderr.txt &
