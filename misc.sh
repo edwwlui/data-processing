@@ -35,6 +35,8 @@ input_params=param_dict)\n  File "/home/fyp1/ed/if_data/3yelp_atof/src/deep/algo
 (py27) fyp1@kao-server1:~/ed/if_data/5yelp_theano$  nohup bash run.sh train DeleteAndRetrieve yelp > train.stdout.txt 2>train.      stderr.txt &
 [1] 211288
 
-(smae) fyp1@kao-server1:~/ed/smae/1$ nohup CUDA_VISIBLE_DEVICES=1 python3 main.py > test.stdout.txt 2>test.stderr.txt &
-[1] 211750
+(smae) fyp1@kao-server1:~/ed/smae/1$ CUDA_VISIBLE_DEVICES=1
+(smae) fyp1@kao-server1:~/ed/smae/1$ nohup python3 main.py > test.stdout.txt 2>test.stderr.txt &
+[1] 211798
+
 
