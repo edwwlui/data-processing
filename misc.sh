@@ -41,3 +41,26 @@ input_params=param_dict)\n  File "/home/fyp1/ed/if_data/3yelp_atof/src/deep/algo
 [1] 211798
 
 
+(py27) fyp1@kao-server1:~/ed/if_data/12j_10000_5_ignore_rc$ wc sentiment.test.1.data.orgin
+  2101  48817 252172 sentiment.test.1.data.orgin
+(py27) fyp1@kao-server1:~/ed/if_data/12j_10000_5_ignore_rc$ wc sentiment.test.0.data.orgin
+  2748  60777 299107 sentiment.test.0.data.orgin
+(py27) fyp1@kao-server1:~/ed/if_data/12j_10000_5_ignore_rc$ wc sentiment.test.1.template.orgin
+  2101  48817 252172 sentiment.test.1.template.orgin
+(py27) fyp1@kao-server1:~/ed/if_data/12j_10000_5_ignore_rc$ wc sentiment.test.1.template.orgin.emb
+    2101  1124529 13126920 sentiment.test.1.template.orgin.emb
+(py27) fyp1@kao-server1:~/ed/if_data/12j_10000_5_ignore_rc$ wc sentiment.test.1.template.orgin.emb.result
+  21010  976309 5280435 sentiment.test.1.template.orgin.emb.result
+(py27) fyp1@kao-server1:~/ed/if_data/12j_10000_5_ignore_rc$ wc sentiment.test.1.template.orgin.emb.result.filter
+  21010  736000 4016163 sentiment.test.1.template.orgin.emb.result.filter
+(py27) fyp1@kao-server1:~/ed/if_data/12j_10000_5_ignore_rc$ wc sentiment.test.1.template.orgin.emb.result.filter.result
+   3792  182849 1026724 sentiment.test.1.template.orgin.emb.result.filter.result
+(py27) fyp1@kao-server1:~/ed/if_data/12j_10000_5_ignore_rc$ wc sentiment.test.1.template.orgin.emb.result.filter.result.result
+   3792  186641 1062318 sentiment.test.1.template.orgin.emb.result.filter.result.result
+(py27) fyp1@kao-server1:~/ed/if_data/12j_10000_5_ignore_rc$ wc sentiment.test.1.template.orgin.emb.result.filter.result.result.final_result
+  380  8236 41484 sentiment.test.1.template.orgin.emb.result.filter.result.result.final_result
+(py27) fyp1@kao-server1:~/ed/if_data/12j_10000_5_ignore_rc$ wc sentiment.test.1.DeleteAndRetrieve.yelp
+  380  8236 41484 sentiment.test.1.DeleteAndRetrieve.yelp
+
+integral error
+run.sh download in lab
