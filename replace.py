@@ -2,8 +2,7 @@ import re
 #import string
 
 #printable = set(string.printable)
-files = ["sentiment.dev.0", "sentiment.dev.1", "sentiment.test.0", "sentiment.test.1", "sentiment.train.0",
-         "sentiment.train.1"]
+files = ["form.dev.uniq.1"   ,"form.test.uniq.1"   ,"form.train.half.1", "form.dev.uniq.0"  ,"form.test.uniq.0"  ,"form.train.half.0"]
 for file in files:
     with open(file, "r") as fi:
         for line in fi:
