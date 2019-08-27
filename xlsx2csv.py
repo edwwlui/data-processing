@@ -1,8 +1,10 @@
 import pandas as pd
+from os import listdir
+from os.path import isfile, join
 map=pd.read_excel('JPM fund.xlsx')
 #first=pd.read_csv('first.csv')
-files=[]
-files.append('JPMAM-HistoricalPrice(LU0945454980).xlsx')
+mypath='C:\Users\Re\Downloads\mutual_fund_date_nav'
+files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 for file in files:
   df=pd.read_excel(file,skiprows=6)
   print(df)
